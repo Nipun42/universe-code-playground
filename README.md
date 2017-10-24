@@ -1,4 +1,4 @@
-# Universe Code Playground
+# 💻 Universe Code Playground
 
 Universe is the easiest way to make a website. Choose a custom domain, build your site, and share it in less than a minute—all on your iPhone, for free. Get it at [onuniverse.com](onuniverse.com).
 
