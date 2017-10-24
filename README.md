@@ -28,7 +28,9 @@ If you're new to programming or don't know where to start, check out the Code Bl
 
 * Images must be hosted elsewhere.
 
-* Break the rules and have fun!
+* Avoid creating Code Blocks that scroll.
+
+* Have fun!
 
 ## Pro Tips
 Permanently change the Code Block's size and position by changing these values at the bottom of `extras/script.js`:
