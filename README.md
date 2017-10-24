@@ -2,11 +2,11 @@
 
 Universe is the easiest way to make a website. Choose a custom domain, build your site, and share it in less than a minute—all on your iPhone, for free. Get it at [onuniverse.com](onuniverse.com).
 
-![](https://i.imgur.com/zkZHsDJ.png)
-
 The new Code Block lets you run custom web code in your Universe site. This starter kit makes it easy to create your own blocks and see how they react when stretched in different directions.
 
 If you're new to programming or don't know where to start, check out the Code Block Gallery in the Universe app for ideas.
+
+![](https://i.imgur.com/zkZHsDJ.png)
 
 ## Getting started
 1. Download or clone this repository.
