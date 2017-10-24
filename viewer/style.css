@@ -1,0 +1,264 @@
+* {
+  user-select: none;
+  font-family: 'Roboto Mono','HelveticaNeue-Std', helvetica, sans-serif;
+}
+
+html {
+  background: #f7f7f7;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.info {
+  position: fixed;
+  top: 45%;
+  left: 26px;
+}
+
+@media only screen and (max-width: 940px) {
+  .info, .documentation-link {
+    display: none;
+  }
+}
+
+.info .logo {
+  margin-left: -2px;
+  width: 120px;
+  margin-bottom: 2px;
+}
+
+.info h2 {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 400;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.documentation-link {
+  font-weight: 400;
+  position: fixed;
+  bottom: 23px;
+  left: 26px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none !important;
+  /*border-bottom: 2px solid #bbb;*/
+}
+
+.info .documentation-link::after {
+  width: 100%;
+  content: '';
+
+}
+
+.grid {
+  position: relative;
+  background: rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 560px;
+  height: 100%;
+  overflow: visible;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url(./grid-lines.svg);
+}
+
+.code-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.1);
+  transition: background-color 0.15s;
+  box-sizing: border-box;
+  overflow: visible;
+  transition: width 0.01s ease-in-out, height 0.01s ease-in-out, top 0.01s ease-in-out, left 0.01s ease-in-out;
+}
+
+.code-block iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.code-block .handle {
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  border: 16px solid rgba(255,255,255,0);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0);
+  transition: border 0.15s, box-shadow 0.2s;
+}
+
+.grid:hover .handle {
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  border: 16px solid rgba(255,255,255,0.1);
+}
+
+.code-block:hover .handle {
+  border: 16px solid rgba(255,255,255,0.7);
+}
+
+.code-block.ui-resizable-resizing {}
+
+.code-block.ui-resizable-resizing .handle {
+  z-index: 4;
+  border: 16px solid rgba(255,255,255,0.7);
+  box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+}
+
+.code-block:hover {
+  /*background-color: rgba(0,0,0,0);*/
+}
+
+
+
+/* Brand Tag styles */
+.brand-tag {
+  display: block;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  background-image: url('./brand-tag.svg');
+  background-size: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: 0.15s width ease-in-out, 0.08s transform ease-in-out;
+  z-index: 5;
+}
+
+.brand-tag.touch-down {
+  -webkit-transform: scale(0.98);
+  -moz-transform:    scale(0.98);
+  -ms-transform:     scale(0.98);
+  transform:         scale(0.98);
+}
+
+.brand-tag.open {
+  width: 210px;
+}
+
+@media only screen and (min-width: 800px) {
+  .brand-tag {
+    position: fixed;
+    right: 14px;
+    left: auto;
+    bottom: 14px;
+    margin: 0;
+    transition: 0.15s width ease-in-out 0.1s, 0.08s transform ease-in-out;
+  }
+
+  .brand-tag:hover {
+    width: 210px;
+    cursor: pointer;
+    transition: 0.15s width ease-in-out, 0.08s transform ease-in-out;
+  }
+
+  .brand-tag.open {
+    width: 210px;
+    cursor: pointer;
+    transition: 0.15s width ease-in-out, 0.08s transform ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .brand-tag {
+    display: none;
+  }
+}
+
+/*JQUERY UI RESIZABLE HANDLES*/
+div.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 20px;
+  height: 20px;
+  left: -16px;
+  top: -16px;
+}
+
+div.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 20px;
+  height: 20px;
+  right: -16px;
+  top: -16px;
+}
+
+div.ui-resizable-se {
+  cursor: se-resize;
+  width: 20px;
+  height: 20px;
+  right: -16px;
+  bottom: -16px;
+  background: none;
+}
+
+div.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 20px;
+  height: 20px;
+  left: -16px;
+  bottom: -16px;
+  background: none;
+}
+
+div.ui-resizable-s {
+    cursor: ns-resize;
+    height: 17px;
+    width: 100%;
+    bottom: -16px;
+    left: 0;
+}
+
+div.ui-resizable-w {
+    cursor: ew-resize;
+    width: 17px;
+    height: 100%;
+    left: -16px;
+    top: 0;
+}
+
+div.ui-resizable-n {
+    cursor: ns-resize;
+    height: 17px;
+    width: 100%;
+    top: -16px;
+    left: 0;
+}
+
+div.ui-resizable-e {
+    cursor: ew-resize;
+    width: 17px;
+    height: 100%;
+    right: -16px;
+    top: 0;
+}
