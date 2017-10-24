@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var Viewer = {
+  var Playground = {
     gridSize: {
       w: 560/3,
       h: 199
@@ -9,36 +9,35 @@ $(document).ready(function() {
 
   var CodeBlock = {
     element: document.querySelector('.code-block'),
+    // method that sets the block's width, height, and position using integers representing columns and rows
     set: function(style) {
-      style.width = (style.width * Viewer.gridSize.w)+'px'
-      style.height = (style.height * Viewer.gridSize.h)+'px'
+      style.width = (style.width * Playground.gridSize.w)+'px'
+      style.height = (style.height * Playground.gridSize.h)+'px'
 
-      style.left = style.left * Viewer.gridSize.w+'px'
-      style.top = style.top * Viewer.gridSize.h+'px'
+      style.left = style.left * Playground.gridSize.w+'px'
+      style.top = style.top * Playground.gridSize.h+'px'
 
       $(this.element).css(style)
     }
   }
 
+  // Make Code Block resizable
   $( CodeBlock.element ).resizable({
-    grid: [Viewer.gridSize.w, Viewer.gridSize.h],
+    grid: [Playground.gridSize.w, Playground.gridSize.h],
     handle: '.handle',
     handles: 'n, e, s, w, ne, se, sw, nw',
     containment: "parent"
   })
 
-  // INITIAL PLACE AND RESIZE
+  // Set Code Block's position and size in Columns and Rows
   CodeBlock.set({
     left: 1,
-    top: 2,
+    top: 1,
     width: 2,
     height: 2
   })
 
-
-  var State = {
-    
-  }
-
+  // Fade in Code Block
+  $(CodeBlock.element).addClass('ready')
 
 })

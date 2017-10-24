@@ -1,10 +1,10 @@
 # Universe Code Playground
 
-![](https://i.imgur.com/zkZHsDJ.png)
-
 Universe is the easiest way to make a website. Choose a custom domain, build your site, and share it in less than a minute—all on your iPhone, for free. Get it at [onuniverse.com](onuniverse.com).
 
 The new Code Block lets you run custom web code in your Universe site. This starter kit makes it easy to create your own blocks and see how they react when stretched in different directions.
+
+![](https://i.imgur.com/zkZHsDJ.png)
 
 If you're new to programming or don't know where to start, check out the Code Block Gallery in the Universe app for ideas.
 
@@ -18,3 +18,16 @@ If you're new to programming or don't know where to start, check out the Code Bl
 4. Write HTML, CSS, and Javascript. Save the file and refresh your browser to see changes. Stretch the block and see how it responds.
 
 5. When you're happy, copy everything in `code-block.html`, and paste it into a Code Block in the Universe app.
+
+## Pro Tips
+Permanently change the Code Block's size and position by changing these values at the bottom of `extras/script.js`:
+
+```javascript
+// Set Code Block's starting position and size in columns and rows
+CodeBlock.set({
+  left: 1,
+  top: 1,
+  width: 2,
+  height: 2
+})
+```
