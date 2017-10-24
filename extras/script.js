@@ -29,7 +29,7 @@ $(document).ready(function() {
     containment: "parent"
   })
 
-  // Set Code Block's position and size in Columns and Rows
+  // Set Code Block's starting position and size in Columns and Rows
   CodeBlock.set({
     left: 1,
     top: 1,
